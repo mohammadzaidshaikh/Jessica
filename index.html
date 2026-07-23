@@ -144,7 +144,7 @@
 
   .tagline{
     margin-top:14px;
-    font-size:clamp(.95rem, 2.6vw, 1.08rem);
+    font-size:clamp(1.05rem, 2.8vw, 1.22rem);
     color:var(--plum-soft);
     font-weight:600;
     max-width:44ch;
@@ -201,13 +201,13 @@
     background:rgba(255,255,255,.65);
     border:1px solid rgba(255,255,255,.9);
     border-radius:16px;
-    padding:10px 16px;
+    padding:11px 18px;
     font-weight:700;
-    font-size:.85rem;
+    font-size:.98rem;
     color:var(--plum);
     box-shadow:0 6px 14px -8px rgba(60,42,77,.25);
   }
-  .fact span{ display:block; font-size:1.3rem; margin-bottom:2px; }
+  .fact span{ display:block; font-size:1.5rem; margin-bottom:2px; }
 
   /* ---------- gift section ---------- */
   .gift-section{
@@ -224,20 +224,20 @@
   .gift-hint{
     font-weight:700;
     color:var(--sky-deep);
-    font-size:1rem;
+    font-size:1.15rem;
     margin-bottom:6px;
   }
   .gift-hint small{
     display:block;
     font-weight:600;
     color:var(--plum-soft);
-    font-size:.8rem;
+    font-size:.9rem;
     margin-top:2px;
   }
 
   .gift-box-container{
     margin:22px auto 6px;
-    width:210px; height:210px;
+    width:270px; height:270px;
     perspective:900px;
     cursor:pointer;
     transition:transform .2s ease;
@@ -261,8 +261,8 @@
 
   .box-lid{
     position:absolute;
-    width:100%; height:52px;
-    top:-10px; left:0;
+    width:100%; height:66px;
+    top:-12px; left:0;
     background:linear-gradient(145deg, #ff9dbb, var(--coral-deep));
     border-radius:20px 20px 0 0;
     border-bottom:5px solid var(--blush);
@@ -274,9 +274,9 @@
   }
   .box-lid::after{
     content:"🎀";
-    font-size:2.8rem;
+    font-size:3.6rem;
     filter:drop-shadow(0 2px 4px rgba(0,0,0,.12));
-    margin-top:-6px;
+    margin-top:-8px;
   }
   .gift-box.open .box-lid{
     transform:rotateX(65deg) translateY(-24px);
@@ -286,21 +286,21 @@
   .box-body{
     position:absolute;
     width:100%; height:100%;
-    top:26px; left:0;
+    top:32px; left:0;
     background:linear-gradient(145deg, var(--sky), var(--sky-deep));
-    border-radius:22px 22px 26px 26px;
+    border-radius:26px 26px 30px 30px;
     box-shadow:inset 0 -10px 0 #2a4f8a, 0 18px 32px rgba(0,0,0,.2);
     border:3px solid #a9d2ff;
     display:flex; align-items:center; justify-content:center;
   }
   .box-body .ribbon{
-    position:absolute; width:20px; height:100%; left:50%;
+    position:absolute; width:26px; height:100%; left:50%;
     transform:translateX(-50%);
     background:var(--blush);
     box-shadow:inset -3px 0 0 #d46a8e;
   }
   .box-body .ribbon-h{
-    position:absolute; width:100%; height:20px; top:50%;
+    position:absolute; width:100%; height:26px; top:50%;
     transform:translateY(-50%);
     background:var(--blush);
     box-shadow:inset 0 -3px 0 #d46a8e;
@@ -308,11 +308,11 @@
 
   .note-inside{
     position:absolute;
-    top:26px; left:0;
+    top:32px; left:0;
     width:100%; height:100%;
     background:rgba(255,246,242,.97);
-    border-radius:22px;
-    padding:22px 16px;
+    border-radius:26px;
+    padding:28px 20px;
     opacity:0;
     pointer-events:none;
     transition:opacity .4s ease .2s, transform .3s ease;
@@ -328,16 +328,17 @@
 
   .note-inside .note-title{
     font-family:'Baloo 2', sans-serif;
-    font-size:clamp(1.1rem, 4vw, 1.5rem);
+    font-size:clamp(1rem, 3.4vw, 1.3rem);
     font-weight:700;
     color:var(--coral-deep);
-    margin-bottom:6px;
+    margin-bottom:8px;
   }
   .note-inside p{
-    font-size:clamp(.85rem, 3vw, 1.05rem);
+    font-size:clamp(.75rem, 2.6vw, .92rem);
     font-weight:600;
     max-width:94%;
     color:var(--plum);
+    line-height:1.55;
   }
 
   /* ---------- gallery ---------- */
@@ -440,10 +441,15 @@
     body{ padding:20px 10px 50px; }
     .hero{ padding:30px 18px 26px; }
     .gift-section, .gallery-section{ padding:26px 14px 24px; }
-    .gift-box-container{ width:172px; height:172px; }
-    .box-lid{ height:44px; }
-    .box-lid::after{ font-size:2.2rem; }
-    .box-body{ top:22px; }
+    .gift-box-container{ width:220px; height:220px; }
+    .box-lid{ height:54px; }
+    .box-lid::after{ font-size:2.8rem; }
+    .box-body{ top:26px; }
+    .box-body .ribbon{ width:20px; }
+    .box-body .ribbon-h{ height:20px; }
+    .note-inside{ top:26px; padding:22px 16px; }
+    .note-inside .note-title{ font-size:clamp(.95rem, 4vw, 1.2rem); }
+    .note-inside p{ font-size:clamp(.72rem, 3vw, .85rem); }
     .photo-frame{ width:120px; height:120px; }
     .character{ font-size:2.6rem; bottom:10px; left:8px; }
     .gallery-grid{ grid-template-columns:repeat(2, 1fr); }
@@ -456,7 +462,7 @@
   @media (min-width:901px){
     .page{ max-width:800px; }
     .hero{ padding:46px 40px 40px; }
-    .gift-box-container{ width:230px; height:230px; }
+    .gift-box-container{ width:300px; height:300px; }
   }
 
   /* focus visibility for accessibility */
@@ -509,7 +515,7 @@
             <div class="ribbon-h"></div>
             <div class="note-inside">
               <p class="note-title">💖 To the most amazing Jessica 💖</p>
-              <p>Happy Birthday! You are the sunshine that makes every day brighter. I am so incredibly lucky to have you as my best friend. May your day be as beautiful and wonderful as you are. Here's to many more years of laughter and adventures together. I love you! 💕</p>
+              <p>Very Happiest Birthday! You are the sunshine that makes every day brighter. I am so incredibly lucky to have you as my best friend. May your day be as beautiful and wonderful as you are. Here's to many more years of laughter and adventures together. I love you! 💕</p>
               <div style="font-size:1.8rem; margin-top:8px;">🎂✨🎁</div>
             </div>
           </div>
@@ -519,22 +525,22 @@
 
     <!-- GALLERY -->
     <section class="gallery-section">
-      <div class="gallery-title">🌸 A few of our favorite moments 🌸</div>
+      <div class="gallery-title">🌸 A few of your favorite moments 🌸</div>
       <div class="gallery-grid">
         <div class="gallery-item">
           <img src="photo.jpeg" alt="Celebration memory" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="fallback">🎂</div>
         </div>
         <div class="gallery-item">
-          <img src="photo1.jpeg" alt="Memory two" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="photo2.jpeg" alt="Memory two" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="fallback">🌸</div>
         </div>
         <div class="gallery-item">
-          <img src="photo.jpeg" alt="Memory three" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="photo3.jpeg" alt="Memory three" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="fallback">✨</div>
         </div>
         <div class="gallery-item">
-          <img src="photo1.jpeg" alt="Memory four" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="photo4.jpeg" alt="Memory four" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="fallback">🎉</div>
         </div>
       </div>
